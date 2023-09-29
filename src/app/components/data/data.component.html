@@ -1,0 +1,32 @@
+<main class="container-fluid d-flex flex-column align-items-center justify-content-center">
+  <h2 class="m-3">Lakosság a népszámlálások alkalmával:</h2>
+  <div [hidden]="!error"
+       class="alert alert-danger"
+       role="alert">
+    <h3>
+      Hiba történt az adatbázis betöltése során:
+    </h3>
+    <p>{{ errorMessage }}</p>
+  </div>
+  <table [hidden]="error"
+         class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">évszám</th>
+        <th scope="col">magyar</th>
+        <th scope="col">német</th>
+        <th scope="col">szlovák</th>
+        <th scope="col">egyéb lakosság</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dataList">
+        <td>{{ item.evszam }}</td>
+        <td>{{ item.magyar }}</td>
+        <td>{{ item.nemet }}</td>
+        <td>{{ item.szlovak }}</td>
+        <td>{{ item.egyeb }}</td>
+      </tr>
+    </tbody>
+  </table>
+</main>

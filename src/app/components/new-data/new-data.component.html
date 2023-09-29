@@ -1,0 +1,62 @@
+<main class="container-fluid d-flex flex-column align-items-center">
+       <h1 class="mt-3">Adatok bevitele</h1>
+
+       <form [formGroup]="populationData"
+             (ngSubmit)="addItem()"
+             class="col-12 col-sm-10 col-md-6 col-xl-6 col-xxl-3 custom-card">
+
+              <div class="mb-3 mt-3">
+                     <label for="evszam"
+                            class="form-label">Évszám:</label>
+                     <input formControlName="evszam"
+                            type="number"
+                            class="form-control"
+                            id="evszam"
+                            name="evszam"
+                            min="0">
+              </div>
+              <div class="mb-3">
+                     <label for="magyar"
+                            class="form-label">magyar:</label>
+                     <input formControlName="magyar"
+                            type="number"
+                            class="form-control"
+                            id="magyar"
+                            name="magyar"
+                            min="1">
+              </div>
+              <div class="mb-3">
+                     <label for="nemet"
+                            class="form-label">német:</label>
+                     <input formControlName="nemet"
+                            type="number"
+                            class="form-control"
+                            id="nemet"
+                            name="nemet"
+                            min="1">
+              </div>
+              <div class="mb-3">
+                     <label for="szlovak"
+                            class="form-label">szlovák:</label>
+                     <input formControlName="szlovak"
+                            type="number"
+                            class="form-control"
+                            id="szlovak"
+                            name="szlovak"
+                            min="1">
+              </div>
+              <div class="mb-3">
+                     <label for="egyeb"
+                            class="form-label">egyéb:</label>
+                     <input formControlName="egyeb"
+                            type="number"
+                            class="form-control"
+                            id="egyeb"
+                            name="egyeb"
+                            min="1">
+              </div>
+
+              <button type="submit"
+                      class="btn btn-primary mt-3 mb-3">Küldés</button>
+       </form>
+</main>
